@@ -7,12 +7,19 @@ import upload_icon from '../../assets/upload.png'
 import more_icon from '../../assets/more.png'
 import notification_icon from '../../assets/notification.png'
 import jack_img from '../../assets/jack.png'
+import { useDispatch } from "react-redux"
+import { toggleMenu } from "../../utils/appSlice"
 
 const Navbar = () => {
+  const dispatch = useDispatch();
+  const handleMenuIcon = () => {
+    dispatch(toggleMenu())
+  }
+
   return (
     <nav className="flex-div">
       <div className="nav-left flex-div">
-                <img src={menu_icon} alt="" className="menu-icon"  />
+                <img src={menu_icon} alt="" className="menu-icon" onClick = {handleMenuIcon} />
                 <img src={logo} alt="" className="logo" />
             </div>
             <div className="nav-middle flex-div">
