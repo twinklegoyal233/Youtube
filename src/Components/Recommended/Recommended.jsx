@@ -23,9 +23,9 @@ const Recommended = ({ categoryId }) => {
 }, [])
 
   return  <div className="recommended">
-  {apiData.map((item,index) => {
+  {apiData.map((item) => {
       return (
-          <div key={index} className="side-video-list">
+          <div key={item.snippet.title} className="side-video-list">
               <Link to={`/video/${item.snippet.categoryId}/${item.id}`} onClick={()=>window.scrollTo(0,0)} className="small-thumbnail">
                   <img src={item.snippet.thumbnails.medium.url} alt="" /></Link>
               <div className="vid-info">

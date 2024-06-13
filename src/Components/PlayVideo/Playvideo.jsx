@@ -57,6 +57,7 @@ const Playvideo = () => {
 
   useEffect(() => {
     fetchVideoData();
+    window.scrollTo(0, 0);
   }, [videoId]);
 
   useEffect(() => {
@@ -115,8 +116,8 @@ const Playvideo = () => {
           {apiData ? value_converter(apiData.statistics.commentCount) : 130}{" "}
           Comments
         </h4>
-        {commentData.map((item, index) => (
-          <div key={index} className="comment">
+        {commentData.map((item) => (
+          <div key={item.id} className="comment">
             <img
               src={item.snippet.topLevelComment.snippet.authorProfileImageUrl}
               alt=""
