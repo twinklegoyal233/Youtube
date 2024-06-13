@@ -1,6 +1,5 @@
 import "./Navbar.css"
 import menu_icon from "../../assets/menu.png"
-import { Link } from "react-router-dom"
 import logo from '../../assets/logo.png'
 import search_icon from '../../assets/search.png'
 import upload_icon from '../../assets/upload.png'
@@ -9,6 +8,7 @@ import notification_icon from '../../assets/notification.png'
 import jack_img from '../../assets/jack.png'
 import { useDispatch } from "react-redux"
 import { toggleMenu } from "../../utils/appSlice"
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -20,7 +20,8 @@ const Navbar = () => {
     <nav className="flex-div">
       <div className="nav-left flex-div">
                 <img src={menu_icon} alt="" className="menu-icon" onClick = {handleMenuIcon} />
-                <img src={logo} alt="" className="logo" />
+                <Link to='/'> <img src={logo} alt="" className="logo" /></Link>
+            
             </div>
             <div className="nav-middle flex-div">
                 <div className="search-box flex-div">

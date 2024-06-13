@@ -7,7 +7,6 @@ import entertainmentIcon from "../../assets/entertainment.png";
 import techIcon from "../../assets/tech.png";
 import musicIcon from "../../assets/music.png";
 import newsIcon from "../../assets/news.png";
-import { Link } from "react-router-dom";
 import { subscribedUsers} from "./SidebarData";
 import { useSelector } from "react-redux";
 const Sidebar = ({category,setCategory}) => {

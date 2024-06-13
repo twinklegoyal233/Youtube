@@ -9,7 +9,7 @@ import { value_converter } from "../constant"
 const Feed = ({category}) => {
   const [data,setData] = useState([]);
   const fetchData = async () => {
-    const data = await fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${GOOGLE_API_KEY}`)
+    const data = await fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&videoCategoryId=${category}&key=${GOOGLE_API_KEY}`)
     const json = await data.json();
    setData(json.items);
   }
