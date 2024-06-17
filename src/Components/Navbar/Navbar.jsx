@@ -5,10 +5,10 @@ import search_icon from '../../assets/search.png'
 import upload_icon from '../../assets/upload.png'
 import more_icon from '../../assets/more.png'
 import notification_icon from '../../assets/notification.png'
-import jack_img from '../../assets/jack.png'
 import { useDispatch } from "react-redux"
 import { toggleMenu } from "../../utils/appSlice"
 import { Link } from "react-router-dom"
+import twinkle from "../../assets/twinkle.png"
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -33,7 +33,7 @@ const Navbar = () => {
                 <img src={upload_icon} alt="" />
                 <img src={more_icon} alt="" />
                 <img src={notification_icon} alt="" />
-                <img src={jack_img} alt="" className="user-icon" />
+                <img src={twinkle} alt="" className="user-icon" />
             </div>
     </nav>
   )
